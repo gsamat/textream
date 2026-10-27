@@ -247,6 +247,14 @@ Run the standalone navigation regression suite on a Mac with Xcode installed:
 
 It covers sentence and screen navigation in both directions, page boundaries, keyboard bindings, pause preservation, and stale layout measurements after a jump.
 
+To also check that stopping an unused speech recognizer does not initialize or wait for a microphone device:
+
+```bash
+./Tests/run-audio-cleanup.sh
+```
+
+This smoke test compiles the production macOS types with a test entry point and runs cleanup twice under a ten-second timeout, without launching the app interface or requesting microphone access.
+
 ### Project structure
 
 ```
