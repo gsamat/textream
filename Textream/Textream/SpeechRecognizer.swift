@@ -99,6 +99,7 @@ struct AudioInputDevice: Identifiable, Hashable {
 
 @Observable
 class SpeechRecognizer {
+    let playback = PrompterPlayback()
     var recognizedCharCount: Int = 0
     var isListening: Bool = false
     var isStarting: Bool = false
